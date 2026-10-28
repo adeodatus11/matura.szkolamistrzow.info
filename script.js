@@ -1,6 +1,6 @@
 const events = [
   { start: "2026-09-01", end: "2027-09-10", display: "Cały rok", month: "2026/2027", title: "Odbierz dane do systemu ZIU-SIOEO", description: "Odbierz od dyrektora szkoły login i hasło. W systemie możesz złożyć deklarację elektronicznie.", category: "formalnosci", tag: "Formalności" },
-  { start: "2027-01-18", end: "2027-01-31", display: "18–31 stycznia", month: "2027", title: "Ferie zimowe", description: "Przerwa zimowa w województwie dolnośląskim i opolskim.", category: "formalnosci", tag: "Organizacja roku" },
+  { start: "2027-01-18", end: "2027-01-31", display: "18–31 stycznia", month: "2027", title: "Ferie zimowe", description: "Przerwa zimowa w województwie dolnośląskim i opolskim.", category: "formalnosci", tag: "Organizacja roku", featured: false },
   { start: "2027-02-07", display: "do 7 lutego", month: "2027", title: "Złóż deklarację maturalną", description: "Przekaż dyrektorowi deklarację egzaminacyjną oraz dokumenty uprawniające do dostosowania warunków i form egzaminu.", category: "formalnosci", tag: "Ważny termin" },
   { start: "2027-02-15", end: "2027-02-28", display: "15–28 lutego", month: "2027", title: "Sprawdź dane przekazane do OKE", description: "Zweryfikuj poprawność danych z deklaracji i podpisz potwierdzenie ich zgodności.", category: "formalnosci", tag: "Formalności" },
   { start: "2027-03-04", display: "do 4 marca", month: "2027", title: "Harmonogram egzaminów ustnych", description: "Szkoła ogłasza własny harmonogram części ustnej egzaminu maturalnego.", category: "egzaminy", tag: "Harmonogram" },
@@ -41,7 +41,8 @@ function renderTimeline() {
 }
 
 function getNextEvent() {
-  return events.find((event) => localDate(event.start) > now) || events.find((event) => localDate(event.end || event.start, true) >= now) || events[events.length - 1];
+  const featuredEvents = events.filter((event) => event.featured !== false);
+  return featuredEvents.find((event) => localDate(event.start) > now) || featuredEvents.find((event) => localDate(event.end || event.start, true) >= now) || featuredEvents[featuredEvents.length - 1];
 }
 
 const nextEvent = getNextEvent();
