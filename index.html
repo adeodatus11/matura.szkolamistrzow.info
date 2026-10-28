@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Najważniejsze terminy matury 2027 — deklaracje, egzaminy, wyniki i poprawki w jednym miejscu." />
+    <meta name="theme-color" content="#111827" />
+    <title>Matura 2027 — najważniejsze terminy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Matura 2027 — strona główna">
+        <img src="logo.svg" alt="Matura 2027" width="196" height="52" />
+      </a>
+      <nav aria-label="Główna nawigacja">
+        <a href="#terminy">Terminy</a>
+        <a href="#procedury">Procedury</a>
+        <a href="#materialy">Materiały</a>
+        <a href="#wskazowki">Dobry plan</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <span class="hero-doodle doodle-one" aria-hidden="true">✓</span>
+        <span class="hero-doodle doodle-two" aria-hidden="true">A+</span>
+        <div class="hero-copy">
+          <p class="eyebrow"><span></span> Rok szkolny 2026/2027</p>
+          <h1>Twoja droga<br />do <em>matury.</em></h1>
+          <p class="hero-lead">Wszystkie ważne daty w jednym miejscu. Bez szukania, bez stresu — wiesz, co i kiedy.</p>
+          <div class="trust-row" aria-label="Zalety serwisu">
+            <span><b>✓</b> aktualne daty</span><span><b>✓</b> sprawdzone źródła</span><span><b>✓</b> zero chaosu</span>
+          </div>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#terminy">Zobacz harmonogram <span aria-hidden="true">↓</span></a>
+            <button class="button button-ghost" id="copy-next" type="button">Skopiuj najbliższy termin</button>
+          </div>
+        </div>
+
+        <aside class="next-card" aria-labelledby="next-label">
+          <div class="next-card-top">
+            <p id="next-label"><span class="live-dot"></span> Najbliższy termin</p>
+            <span id="next-badge">Ważne</span>
+          </div>
+          <div id="next-content">
+            <p class="next-date" id="next-date">—</p>
+            <h2 id="next-title">Ładowanie terminu…</h2>
+            <p id="next-description"></p>
+          </div>
+          <div class="countdown" aria-label="Odliczanie do najbliższego terminu">
+            <div><strong id="count-days">—</strong><span>dni</span></div>
+            <div><strong id="count-hours">—</strong><span>godz.</span></div>
+            <div><strong id="count-minutes">—</strong><span>min.</span></div>
+          </div>
+          <div class="card-sticker" aria-hidden="true">Nie przegap!</div>
+        </aside>
+      </section>
+
+      <div class="ticker" aria-label="Zakres serwisu">
+        <div><span>Terminy</span><b>✦</b><span>Procedury</span><b>✦</b><span>Materiały</span><b>✦</b><span>Strategie nauki</span><b>✦</b><span>Wsparcie</span><b>✦</b><span>Terminy</span><b>✦</b><span>Procedury</span></div>
+      </div>
+
+      <section class="quick-stats" aria-label="Najważniejsze informacje">
+        <article><span>01</span><div><strong>30 kwietnia</strong><small>Koniec zajęć</small></div></article>
+        <article><span>02</span><div><strong>4–24 maja</strong><small>Egzaminy pisemne</small></div></article>
+        <article><span>03</span><div><strong>9 lipca</strong><small>Wyniki matur</small></div></article>
+      </section>
+
+      <section class="schedule" id="terminy">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow"><span></span> Twój plan działania</p>
+            <h2>Ważne terminy</h2>
+          </div>
+          <p>Wybierz kategorię i skup się na tym, co teraz najważniejsze.</p>
+        </div>
+
+        <div class="filters" role="group" aria-label="Filtruj terminy">
+          <button class="filter active" data-filter="all" type="button">Wszystkie</button>
+          <button class="filter" data-filter="formalnosci" type="button">Formalności</button>
+          <button class="filter" data-filter="egzaminy" type="button">Egzaminy</button>
+          <button class="filter" data-filter="wyniki" type="button">Wyniki i poprawki</button>
+        </div>
+
+        <div class="timeline" id="timeline"></div>
+        <p class="empty-state" id="empty-state" hidden>Brak terminów w tej kategorii.</p>
+      </section>
+
+      <section class="procedures" id="procedury">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow"><span></span> Bez zgadywania</p>
+            <h2>Procedury po ludzku</h2>
+          </div>
+          <p>Najważniejsze sytuacje, które warto znać przed egzaminem. W sprawach formalnych zawsze decydują komunikaty CKE, właściwej OKE i Twojej szkoły.</p>
+        </div>
+        <div class="procedure-grid">
+          <article>
+            <span class="card-number">01</span>
+            <div class="card-icon blue">✓</div>
+            <h3>Przed maturą</h3>
+            <p>Złóż deklarację, sprawdź dane przesłane do OKE i dokumenty dotyczące dostosowań. Zachowaj potwierdzenia.</p>
+            <a href="https://cke.gov.pl/egzamin-maturalny/" target="_blank" rel="noopener noreferrer">Procedury CKE <span>↗</span></a>
+          </article>
+          <article>
+            <span class="card-number">02</span>
+            <div class="card-icon yellow">!</div>
+            <h3>Nieobecność</h3>
+            <p>W szczególnych, udokumentowanych przypadkach można wnioskować o termin dodatkowy. Nie zwlekaj — od razu skontaktuj się ze szkołą.</p>
+            <a href="https://cke.gov.pl/egzamin-maturalny/harmonogram-komunikaty-i-informacje/" target="_blank" rel="noopener noreferrer">Komunikaty CKE <span>↗</span></a>
+          </article>
+          <article>
+            <span class="card-number">03</span>
+            <div class="card-icon coral">?</div>
+            <h3>Po wynikach</h3>
+            <p>Możesz wystąpić o wgląd do pracy. Jeśli spełniasz warunki poprawki, pamiętaj o pisemnym oświadczeniu do dyrektora szkoły.</p>
+            <a href="https://cke.gov.pl/egzamin-maturalny/wyniki/" target="_blank" rel="noopener noreferrer">Wyniki i informacje <span>↗</span></a>
+          </article>
+        </div>
+        <div class="official-note"><strong>Zasada bezpieczeństwa:</strong> poradniki pomagają się odnaleźć, ale przed podjęciem formalnej decyzji sprawdź aktualny komunikat CKE/OKE lub zapytaj dyrektora szkoły.</div>
+      </section>
+
+      <section class="resources" id="materialy">
+        <div class="resources-heading">
+          <div>
+            <p class="eyebrow light"><span></span> Sprawdzone kierunki</p>
+            <h2>Materiały do nauki</h2>
+          </div>
+          <p>Nie musisz mieć dwudziestu zakładek. Zacznij od jednego dobrego źródła, a wiedzę sprawdzaj na arkuszach.</p>
+        </div>
+        <div class="resource-grid">
+          <article class="resource-card polish">
+            <div class="resource-top"><span>Język polski</span><b>PL</b></div>
+            <h3>Lektury, motywy,<br />argumentacja</h3>
+            <ul><li><a href="https://wolnelektury.pl/" target="_blank" rel="noopener noreferrer">Wolne Lektury — pełne teksty ↗</a></li><li><a href="https://klp.pl/" target="_blank" rel="noopener noreferrer">KLP — opracowania i motywy ↗</a></li></ul>
+          </article>
+          <article class="resource-card math">
+            <div class="resource-top"><span>Matematyka</span><b>∑</b></div>
+            <h3>Teoria, zadania,<br />schematy</h3>
+            <ul><li><a href="https://www.matemaks.pl/matura-z-matematyki.html" target="_blank" rel="noopener noreferrer">Matemaks — kurs maturalny ↗</a></li><li><a href="https://arkusze.pl/maturalne/matematyka/" target="_blank" rel="noopener noreferrer">Arkusze z matematyki ↗</a></li></ul>
+          </article>
+          <article class="resource-card english">
+            <div class="resource-top"><span>Język angielski</span><b>Aa</b></div>
+            <h3>Słownictwo, gramatyka,<br />wypowiedź</h3>
+            <ul><li><a href="https://www.ang.pl/" target="_blank" rel="noopener noreferrer">Ang.pl — ćwiczenia i gramatyka ↗</a></li><li><a href="https://arkusze.pl/maturalne/jezyk-angielski/" target="_blank" rel="noopener noreferrer">Arkusze z angielskiego ↗</a></li></ul>
+          </article>
+          <article class="resource-card biology">
+            <div class="resource-top"><span>Biologia</span><b>DNA</b></div>
+            <h3>Zadania, doświadczenia,<br />analiza danych</h3>
+            <ul><li><a href="https://biologhelp.pl/" target="_blank" rel="noopener noreferrer">BiologHelp — zadania i arkusze ↗</a></li><li><a href="https://arkusze.pl/maturalne/biologia/" target="_blank" rel="noopener noreferrer">Arkusze z biologii ↗</a></li></ul>
+          </article>
+        </div>
+        <div class="resource-footer">
+          <div><span>OFICJALNE</span><strong>Materiały i informatory</strong><p>Podstawa programowa, informatory i bezpłatne zasoby edukacyjne.</p></div>
+          <a class="button button-light" href="https://zpe.gov.pl/" target="_blank" rel="noopener noreferrer">Otwórz ZPE ↗</a>
+          <a class="button button-light" href="https://cke.gov.pl/egzamin-maturalny/" target="_blank" rel="noopener noreferrer">Otwórz CKE ↗</a>
+        </div>
+      </section>
+
+      <section class="tips" id="wskazowki">
+        <div class="tips-intro">
+          <p class="eyebrow light"><span></span> Mniej chaosu, więcej spokoju</p>
+          <h2>Ucz się mądrzej,<br />nie dłużej.</h2>
+          <p>Plan powinien pomagać ruszyć z miejsca, a nie dokładać presji. Małe, regularne powtórki są skuteczniejsze niż jeden wielki maraton.</p>
+        </div>
+        <div class="tips-grid">
+          <article><span>1</span><div><h3>Najpierw diagnoza</h3><p>Rozwiąż arkusz bez pomocy. Zaznacz trzy najsłabsze obszary i od nich zacznij plan.</p></div></article>
+          <article><span>2</span><div><h3>Aktywne przypominanie</h3><p>Zamknij notatki i odtwórz wiedzę z pamięci: pytania, fiszki, miniwypracowanie albo zadanie.</p></div></article>
+          <article><span>3</span><div><h3>Powtórki w odstępach</h3><p>Wracaj do materiału po 1, 3, 7 i 14 dniach. Błędy zapisuj w osobnym zeszycie.</p></div></article>
+        </div>
+      </section>
+
+      <section class="wellbeing">
+        <div class="wellbeing-copy">
+          <p class="eyebrow"><span></span> Głowa też zdaje maturę</p>
+          <h2>Stres jest sygnałem.<br />Nie wyrokiem.</h2>
+          <p>Krótki stres potrafi mobilizować. Jeśli napięcie odbiera Ci sen, utrudnia jedzenie lub codzienne funkcjonowanie — nie zostawaj z tym samodzielnie.</p>
+          <div class="support-links">
+            <a href="https://pacjent.gov.pl/" target="_blank" rel="noopener noreferrer">Wiarygodne informacje o zdrowiu <span>Pacjent.gov.pl ↗</span></a>
+            <a href="https://116111.pl/" target="_blank" rel="noopener noreferrer">Bezpłatne wsparcie dla młodych <span>116 111 ↗</span></a>
+          </div>
+        </div>
+        <div class="calm-card">
+          <span class="calm-label">Gdy napięcie rośnie</span>
+          <h3>60 sekund na reset</h3>
+          <ol><li><strong>4 sekundy</strong> — spokojny wdech nosem</li><li><strong>6 sekund</strong> — długi wydech ustami</li><li><strong>6 razy</strong> — powtórz bez pośpiechu</li></ol>
+          <p>Potem wybierz tylko jedno małe zadanie na najbliższe 15 minut.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <a class="brand footer-brand" href="#top"><img src="logo.svg" alt="Matura 2027" width="196" height="52" /></a>
+      <p>Terminy opracowano na podstawie harmonogramu dla uczniów klas maturalnych w roku szkolnym 2026/2027.</p>
+      <a href="#top">Wróć na górę ↑</a>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite">Termin skopiowany!</div>
+    <script src="script.js"></script>
+  </body>
+</html>
