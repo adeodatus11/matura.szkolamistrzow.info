@@ -234,10 +234,16 @@ h1 em::after { content: ""; position: absolute; left: 2%; right: 0; bottom: -9px
 .micro-plan p { margin: 0; color: #c9c9c7; font-size: 12px; line-height: 1.5; }
 .study-pressure blockquote { margin: 24px 0 0; padding: 18px; border-radius: 12px; color: var(--ink); background: var(--yellow); font: 800 14px/1.5 "Manrope"; }
 
-footer { min-height: 130px; padding: 35px max(30px, calc((100vw - 1180px) / 2)); display: flex; align-items: center; justify-content: space-between; gap: 30px; background: var(--ink); color: white; }
-footer p { max-width: 480px; color: #8f96a4; font-size: 12px; line-height: 1.6; text-align: center; }
-footer p strong { color: white; font-weight: 700; }
-footer > a:last-child { color: var(--yellow); font-size: 13px; font-weight: 800; }
+footer { padding: 58px max(30px, calc((100vw - 1180px) / 2)) 24px; background: var(--ink); color: white; }
+.footer-main { display: grid; grid-template-columns: 1.15fr .85fr; gap: 80px; align-items: start; }
+.footer-identity p { max-width: 530px; margin: 22px 0 0; color: #8f8f8d; font-size: 12px; line-height: 1.65; }
+.footer-links { display: grid; grid-template-columns: .8fr 1.2fr; gap: 40px; padding-top: 10px; }
+.footer-links div { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
+.footer-links span { margin-bottom: 5px; color: #777775; font-size: 10px; font-weight: 800; letter-spacing: .11em; text-transform: uppercase; }
+.footer-links a { color: white; font-size: 12px; font-weight: 700; line-height: 1.4; }
+.footer-links a:hover { color: var(--yellow); }
+.footer-bottom { display: flex; justify-content: space-between; gap: 25px; margin-top: 42px; padding-top: 20px; border-top: 1px solid #31312f; color: #70706e; font-size: 10px; }
+.footer-bottom a { color: var(--yellow); font-size: 12px; font-weight: 800; }
 .toast { position: fixed; left: 50%; bottom: 25px; z-index: 10; padding: 12px 20px; border-radius: 10px; color: white; background: var(--ink); box-shadow: var(--shadow); opacity: 0; transform: translate(-50%, 20px); pointer-events: none; transition: .25s; }
 .toast.show { opacity: 1; transform: translate(-50%, 0); }
 
@@ -264,7 +270,8 @@ footer > a:last-child { color: var(--yellow); font-size: 13px; font-weight: 800;
   .stress-timeline article + article { border-top: 1px solid var(--line); border-left: 0; }
   .stress-timeline p { min-height: 0; }
   .stress-lab { grid-template-columns: 1fr; }
-  footer { flex-direction: column; text-align: center; }
+  .footer-main { grid-template-columns: 1fr; gap: 45px; }
+  .footer-links { padding-top: 0; }
 }
 @media (max-width: 580px) {
   .site-header { height: 72px; padding: 0 20px; }
@@ -302,6 +309,9 @@ footer > a:last-child { color: var(--yellow); font-size: 13px; font-weight: 800;
   .blackout-card { padding: 27px; box-shadow: 6px 6px 0 var(--ink); }
   .study-pressure { padding: 27px; }
   .blackout-card li { grid-template-columns: 72px 1fr; }
+  footer { padding: 50px 20px 22px; }
+  .footer-links { grid-template-columns: 1fr; gap: 30px; }
+  .footer-bottom { align-items: flex-start; flex-direction: column-reverse; }
 }
 
 @media (prefers-reduced-motion: reduce) {
