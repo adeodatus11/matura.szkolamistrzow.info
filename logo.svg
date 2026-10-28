@@ -1,19 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 196 52" role="img" aria-labelledby="title desc">
-  <title id="title">Matura 2027</title>
-  <desc id="desc">Logo serwisu Matura 2027</desc>
-  <g transform="translate(2 2)">
-    <rect width="48" height="48" rx="14" fill="#3156F5"/>
-    <path d="M11 35V13h6.6L24 23.4 30.4 13H37v22h-6.7V23.7L24 33.6l-6.3-9.9V35H11Z" fill="#FFFDF9"/>
-    <path d="m33 8 3 3 6-7" fill="none" stroke="#FFD85A" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 286 62" role="img" aria-labelledby="title desc">
+  <title id="title">Matura 2027 — Szkoła Mistrzów</title><desc id="desc">Logo serwisu maturalnego Szkoły Mistrzów ZSZ5 we Wrocławiu</desc>
+  <g transform="translate(2 0)">
+    <path d="M13 0h36c7.2 0 13 5.8 13 13v36c0 7.2-5.8 13-13 13H13C5.8 62 0 56.2 0 49V13C0 5.8 5.8 0 13 0Z" fill="#3156F5"/>
+    <path d="M10 42.8c4.4-12.6 12.8-21.1 25.7-25.9 6.1-2.2 11.8-2.9 17.1-2.1-6.9 1.4-12.6 4-17.2 7.8 5.4-.8 10.5-.3 15.3 1.6-7.1.3-12.8 2.2-17.2 5.7l8.7 1.2-12.8 5.3c-5.9 2.5-11.8 4.6-19.6 6.4Z" fill="#FFFDF9"/>
+    <path d="M10 42.8c7.4-4.7 14.8-7.9 22.2-9.5" fill="none" stroke="#141924" stroke-width="2.2" stroke-linecap="round" opacity=".55"/><circle cx="37.8" cy="22.2" r="2.2" fill="#141924"/>
+    <path d="m45 12.5 4 4 8-10" fill="none" stroke="#FFD85A" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"/>
   </g>
-  <g fill="#141924">
-    <path d="M65.3 34V14.2h5.2l6.1 10.2 6.1-10.2H88V34h-5V22l-6.4 10.2L70.2 22v12h-4.9Z"/>
-    <path d="M97.6 34.4c-4.3 0-7.2-3.2-7.2-8s2.9-8 7.2-8c2.1 0 3.8.9 4.8 2.4v-2h4.8V34h-4.8v-2c-1 1.5-2.7 2.4-4.8 2.4Zm1.3-4.2c2.1 0 3.7-1.5 3.7-3.8s-1.6-3.8-3.7-3.8-3.6 1.5-3.6 3.8 1.5 3.8 3.6 3.8Z"/>
-    <path d="M117.1 34.3c-3.7 0-6-2.1-6-6.2V23h-2.4v-4.2h2.4v-4.2h4.9v4.2h4.4V23H116v4.8c0 1.5.7 2.2 2 2.2.8 0 1.5-.2 2.2-.5v4.2c-.9.4-1.9.6-3.1.6Z"/>
-    <path d="M128.5 34.4c-3.8 0-6.3-2.6-6.3-6.9v-8.7h4.9v8c0 2.2 1 3.4 2.8 3.4 1.9 0 3.1-1.4 3.1-3.8v-7.6h4.9V34H133v-2.1c-.9 1.6-2.5 2.5-4.5 2.5Z"/>
-    <path d="M141.2 34V18.8h4.9v2.8c.8-2 2.4-3.1 4.6-3.1.4 0 .8 0 1.2.1v4.7c-.6-.1-1.1-.2-1.7-.2-2.6 0-4.1 1.4-4.1 4.4V34h-4.9Z"/>
-    <path d="M160.1 34.4c-4.3 0-7.2-3.2-7.2-8s2.9-8 7.2-8c2.1 0 3.8.9 4.8 2.4v-2h4.8V34h-4.8v-2c-1 1.5-2.7 2.4-4.8 2.4Zm1.3-4.2c2.1 0 3.7-1.5 3.7-3.8s-1.6-3.8-3.7-3.8-3.6 1.5-3.6 3.8 1.5 3.8 3.6 3.8Z"/>
+  <g transform="translate(76 6)">
+    <text x="0" y="22" fill="#141924" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="900" letter-spacing="-.6">MATURA <tspan fill="#3156F5">2027</tspan></text><path d="M0 30h198" stroke="#D9D7D1"/>
+    <text x="0" y="45" fill="#3156F5" font-family="Arial,Helvetica,sans-serif" font-size="11.5" font-weight="800" letter-spacing="1.45">SZKOŁA MISTRZÓW</text><text x="198" y="45" text-anchor="end" fill="#697080" font-family="Arial,Helvetica,sans-serif" font-size="8.5" font-weight="700" letter-spacing=".6">ZSZ5 WROCŁAW</text>
   </g>
-  <rect x="174" y="12" width="20" height="28" rx="7" fill="#FFD85A"/>
-  <text x="184" y="30.5" text-anchor="middle" fill="#141924" font-family="Arial,sans-serif" font-size="11" font-weight="800">27</text>
 </svg>
