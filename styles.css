@@ -135,6 +135,12 @@ h1 em::after { content: ""; position: absolute; left: 2%; right: 0; bottom: -9px
 .document-warning > span { display: grid; flex: 0 0 auto; place-items: center; width: 38px; height: 38px; border-radius: 50%; color: var(--ink); background: var(--coral); font-weight: 800; }
 .document-warning p { margin: 0; color: #aeb5c2; font-size: 13px; line-height: 1.55; }
 .document-warning strong { color: white; }
+.document-source { display: flex; align-items: center; justify-content: space-between; gap: 30px; margin-top: 14px; padding: 20px 24px; border-radius: 15px; color: var(--ink); background: var(--yellow); }
+.document-source span { display: block; font-size: 10px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.document-source strong { display: block; margin-top: 3px; font: 800 16px "Manrope"; }
+.document-source p { margin: 3px 0 0; font-size: 12px; }
+.document-source a { flex: 0 0 auto; padding: 12px 16px; border: 1px solid rgba(20,25,36,.25); border-radius: 10px; font-size: 12px; font-weight: 800; }
+.document-source a:hover { color: white; border-color: var(--blue); background: var(--blue); }
 
 .procedures { padding: 110px max(30px, calc((100vw - 1180px) / 2)); background: var(--paper); }
 .procedure-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 55px; }
@@ -247,6 +253,8 @@ footer > a:last-child { color: var(--yellow); font-size: 13px; font-weight: 800;
   .document-icon { width: 48px; height: 60px; }
   .document-meta { grid-column: 2; }
   .document-warning { align-items: flex-start; }
+  .document-source { align-items: stretch; flex-direction: column; }
+  .document-source a { text-align: center; }
   .resource-grid { grid-template-columns: 1fr; }
   .resource-footer { align-items: stretch; flex-direction: column; }
   .resource-footer div { margin-bottom: 10px; }
