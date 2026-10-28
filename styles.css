@@ -141,6 +141,17 @@ h1 em::after { content: ""; position: absolute; left: 2%; right: 0; bottom: -9px
 .document-source p { margin: 3px 0 0; font-size: 12px; }
 .document-source a { flex: 0 0 auto; padding: 12px 16px; border: 1px solid rgba(20,25,36,.25); border-radius: 10px; font-size: 12px; font-weight: 800; }
 .document-source a:hover { color: white; border-color: var(--blue); background: var(--blue); }
+.exam-toolkit { margin-top: 65px; }
+.toolkit-heading span { color: var(--yellow); font-size: 10px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.toolkit-heading h3 { margin: 5px 0 24px; font-size: 30px; }
+.toolkit-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.toolkit-grid article { display: grid; grid-template-columns: 48px 1fr; gap: 16px; padding: 24px; border: 1px solid #3a404c; border-radius: 18px; background: #1b212d; }
+.toolkit-symbol { display: grid; place-items: center; width: 46px; height: 46px; border-radius: 13px; color: var(--ink); background: var(--mint); font: 800 17px "Manrope"; }
+.toolkit-grid small { color: #858e9e; font-size: 9px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.toolkit-grid h4 { margin: 5px 0 8px; font: 800 19px "Manrope"; }
+.toolkit-grid p { min-height: 62px; margin: 0; color: #9ca3b0; font-size: 12px; line-height: 1.55; }
+.toolkit-links { display: flex; gap: 12px; margin-top: 17px; flex-wrap: wrap; }
+.toolkit-links a { color: var(--yellow); font-size: 11px; font-weight: 800; }
 
 .procedures { padding: 110px max(30px, calc((100vw - 1180px) / 2)); background: var(--paper); }
 .procedure-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 55px; }
@@ -227,6 +238,8 @@ footer > a:last-child { color: var(--yellow); font-size: 13px; font-weight: 800;
   .documents-intro { align-items: start; flex-direction: column; }
   .document-list article { grid-template-columns: 65px 1fr; }
   .document-meta { grid-column: 2; align-items: flex-start; }
+  .toolkit-grid { grid-template-columns: 1fr; }
+  .toolkit-grid p { min-height: 0; }
   .procedure-grid { grid-template-columns: 1fr; }
   .procedure-grid p { min-height: 0; }
   .resources-heading { align-items: start; flex-direction: column; }
