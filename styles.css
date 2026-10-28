@@ -78,7 +78,12 @@ h1 em::after { content: ""; position: absolute; left: 2%; right: 0; bottom: -9px
 .card-sticker { position: absolute; right: -25px; bottom: -25px; padding: 13px 18px; color: var(--ink); background: var(--coral); font: 800 14px "Manrope"; transform: rotate(-7deg); box-shadow: 4px 5px 0 var(--ink); }
 
 .ticker { padding: 16px 0; color: var(--ink); background: var(--yellow); border-top: 2px solid var(--ink); border-bottom: 2px solid var(--ink); overflow: hidden; transform: rotate(-.6deg) scale(1.02); }
-.ticker div { display: flex; justify-content: center; align-items: center; gap: 27px; width: max-content; min-width: 100%; font: 800 13px "Manrope"; letter-spacing: .1em; text-transform: uppercase; white-space: nowrap; }
+.ticker-track { display: flex; width: max-content; min-width: 100%; }
+.ticker-set { display: flex; flex-shrink: 0; justify-content: center; align-items: center; gap: 27px; min-width: 100vw; padding: 0 14px; font: 800 13px "Manrope"; letter-spacing: .1em; text-transform: uppercase; white-space: nowrap; }
+.ticker-set a { position: relative; }
+.ticker-set a::after { content: ""; position: absolute; left: 0; right: 100%; bottom: -5px; height: 2px; background: var(--ink); transition: right .2s; }
+.ticker-set a:hover::after, .ticker-set a:focus-visible::after { right: 0; }
+.ticker-set a:focus-visible { outline: 2px solid var(--ink); outline-offset: 6px; }
 .ticker b { color: var(--blue); }
 
 .quick-stats { max-width: 1180px; margin: 65px auto 90px; padding: 0 30px; display: grid; grid-template-columns: repeat(3, 1fr); }
@@ -283,7 +288,9 @@ footer { padding: 58px max(30px, calc((100vw - 1180px) / 2)) 24px; background: v
   .next-card { padding: 24px; }
   .card-sticker { right: 5px; }
   .quick-stats { padding: 0 20px; }
-  .ticker div { justify-content: flex-start; padding-left: 20px; }
+  .ticker-track { animation: ticker-scroll 22s linear infinite; }
+  .ticker:hover .ticker-track, .ticker:focus-within .ticker-track { animation-play-state: paused; }
+  .ticker-set { justify-content: flex-start; min-width: max-content; padding: 0 14px; }
   .schedule { padding: 75px 20px; }
   .procedures, .resources, .exam-stress { padding: 75px 20px; }
   .documents { padding: 75px 20px; }
@@ -317,4 +324,11 @@ footer { padding: 58px max(30px, calc((100vw - 1180px) / 2)) 24px; background: v
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: .01ms !important; }
+  .ticker { overflow-x: auto; }
+  .ticker-track { animation: none; }
+  .ticker-set[aria-hidden="true"] { display: none; }
+}
+
+@keyframes ticker-scroll {
+  to { transform: translateX(-50%); }
 }
